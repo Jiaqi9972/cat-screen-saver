@@ -3,22 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spinning Cat</title>
+    <title>Corner Cats</title>
     <style>
       body {
         margin: 0;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        min-height: 100vh;
         background-color: #ede6d6;
+        position: relative;
+        overflow: hidden;
       }
-      img {
+
+      .center-cat {
         width: 50%;
+      }
+
+      .corner-cat {
+        position: fixed;
+        width: 300px;
+      }
+
+      /* Top left corner */
+      .top-left {
+        top: 20px;
+        left: 20px;
+      }
+
+      /* Top right corner */
+      .top-right {
+        top: 20px;
+        right: 20px;
+      }
+
+      /* Bottom left corner */
+      .bottom-left {
+        bottom: 20px;
+        left: 20px;
+      }
+
+      /* Bottom right corner */
+      .bottom-right {
+        bottom: 20px;
+        right: 20px;
       }
     </style>
   </head>
   <body>
-    <img src="cat-final.gif" alt="Spinning Cat" />
+    <!-- Center cat -->
+    <img src="cat-final.gif" alt="Spinning Cat" class="center-cat" />
+
+    <!-- Corner cats -->
+    <img src="shaking.gif" alt="Shaking Cat" class="corner-cat top-left" />
+    <img src="shaking.gif" alt="Shaking Cat" class="corner-cat top-right" />
+    <img src="shaking.gif" alt="Shaking Cat" class="corner-cat bottom-left" />
+    <img src="shaking.gif" alt="Shaking Cat" class="corner-cat bottom-right" />
   </body>
 </html>
